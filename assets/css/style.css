@@ -39,7 +39,7 @@ rslides_tabs li:first-child {
 
 .rslides_tabs li {
     display: inline;
-    float: none;
+    /*float: none;*/
     margin-right: 1px;
 }
 
