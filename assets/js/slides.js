@@ -30,7 +30,7 @@ var slide20 = new Slide("assets/image/SDM_s21.png", "slide 21");
 var slide21 = new Slide("assets/image/SDM_s22.png", "slide 22");
 
 var statisticsProjectList = [slide0,slide1,slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,
-    slide11,slide12,slide13,slide4,slide15,slide16,slide17,slide18,slide19,slide20,slide21];
+    slide11,slide12,slide13,slide14,slide15,slide16,slide17,slide18,slide19,slide20,slide21];
 
 var statisticsProject = new Project(statisticsProjectList);
 
@@ -59,7 +59,7 @@ var slide21 = new Slide("assets/image/TH_s22.png", "slide 22");
 var slide22 = new Slide("assets/image/TH_s23.png", "slide 23");
 
 var texasHoldemProjectList = [slide0,slide1,slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,
-    slide11,slide12,slide13,slide4,slide15,slide16,slide17,slide18,slide19,slide20,slide21,slide22];
+    slide11,slide12,slide13,slide14,slide15,slide16,slide17,slide18,slide19,slide20,slide21,slide22];
 
 var texasHoldemProject = new Project(texasHoldemProjectList);
 
