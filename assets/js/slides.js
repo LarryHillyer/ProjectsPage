@@ -1,7 +1,7 @@
-var slide0 = Slide("assets/image/ComputerizedSportsPools.png", "title slide")
-var slide1 = Slide("assets/image/DesignCriteria.png", "design Criteria")
-var slide2 = Slide("assets/image/RussBucksBlockDiagram.png", "block diagram")
-var slide3 = Slide("assets/image/RussBucksDatabaseDesign.png", "database diagram")
+var slide0 = new Slide("assets/image/ComputerizedSportsPools.png", "title slide")
+var slide1 = new Slide("assets/image/DesignCriteria.png", "design Criteria")
+var slide2 = new Slide("assets/image/RussBucksBlockDiagram.png", "block diagram")
+var slide3 = new Slide("assets/image/RussBucksDatabaseDesign.png", "database diagram")
 var poolProjectList= [slide0,slide1,slide2,slide3];
                        
 var poolProject = new Project(poolProjectList);
