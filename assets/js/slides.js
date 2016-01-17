@@ -2,11 +2,9 @@ var slide0 = new Slide("assets/image/ComputerizedSportsPools.png", "title slide"
 var slide1 = new Slide("assets/image/DesignCriteria.png", "design Criteria")
 var slide2 = new Slide("assets/image/RussBucksBlockDiagram.png", "block diagram")
 var slide3 = new Slide("assets/image/RussBucksDatabaseDesign.png", "database diagram")
-var poolProjectList= [slide0,slide1,slide2,slide3];
 
-                       
+var poolProjectList= [slide0,slide1,slide2,slide3];                      
 var poolProject = new Project(poolProjectList);
-var projects = [poolProject];
 
 slide0 = new Slide("assets/image/SDM_s1.png", "slide 1");
 slide1 = new Slide("assets/image/SDM_s2.png", "slide 2");
@@ -35,11 +33,13 @@ var statisticsProjectList = [slide0,slide1,slide2,slide3,slide4,slide5,slide6,sl
     slide11,slide12,slide13,slide4,slide15,slide16,slide17,slide18,slide19,slide20,slide21];
 
 var statisticsProject = new Project(statisticsProjectList);
+
+var projects = [poolProject];
 projects.push(statisticsProject);
 
-
-
-var slideListElem = document.getElementById("slide-list");
+var slideShowElem;
+var slideListElem;
+var slideTabsElem;
 
 function Slide(src, alt) {
     this.src=src;
@@ -51,6 +51,7 @@ function Project(slideList) {
 }
 
 function getSlides(projectName) {
+    
      for (var i in projectName.slideList) {
          var listElem = document.createElement('li');
          var imgElem = document.createElement('img');
@@ -61,21 +62,62 @@ function getSlides(projectName) {
      }
 }
 
-function clearProject() {
-   
-    slideListElem.innerHTML= "";
-    return
+function createSlideShow () {
+    slideShowElem[0].appendChild(slideListElem);
+    callResponsiveSlides(); 
 }
- 
-$(document).ready(function() {
-    
-    getSlides(projects[0]);
-    
-    
 
+
+function clearSlideShow() {
+    slideListElem.innerHTML="";
+    var slideTabsChildren = slideTabsElem[0].children;
+    for (var i in slideTabsChildren) {
+        slideTabsChildren[i].innerHTML = "";
+    }
+    slideTabsElem[0].innerHTML="";
+    slideShowElem[0].innerHTML="";
+}
+
+function getSeletectedProject() {
+    var project1 = document.querySelector("label.active");
+        var projectType = project1.firstElementChild.value;
+        if (projectType === "pool") {
+            getSlides(projects[0]);
+        } else if (projectType === "decision"){
+            getSlides(projects[1]);
+        } else if (projectType === "holdem") {
+            getSlides(projects[2]);
+        }
+}
+
+function callResponsiveSlides () {
     $(".rslides").responsiveSlides({maxwidth:640,
                                     auto: false,
                                     pager: true});
+}
+
+function initializeResponsiveSlides () {
+    slideShowElem = document.getElementsByClassName("slideshow");
+    getSlides(projects[0]);
+    callResponsiveSlides();
+    
+}
+ 
+$(document).ready(function() {
+    slideListElem = document.getElementById("slide-list");
+    initializeResponsiveSlides();
+                                      
+    $(".radio").change(function() {
+        slideShowElem = document.getElementsByClassName("slideshow");
+        slideTabsElem = document.getElementsByClassName("rslides_tabs")
+        slideListElem = document.getElementById("slide-list");
+        
+        clearSlideShow();
+        getSeletectedProject();
+        createSlideShow()
+        
+    });                                
+                                    
  });
  
 
