@@ -21,7 +21,10 @@ body {
 .container-fluid-css {
     background-color:rgba(16,13,33,.86);
 }
-
+.radio-buttons {
+    text-align: center;
+    margin-left: 29.5%;
+}
 
 
 

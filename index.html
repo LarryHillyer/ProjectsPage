@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="assets/css/style.css">  
     <link rel="stylesheet" href="assets/css/responsiveslides.css">      
 </head>
-<body>
+<body >
 
-    
+   
 <nav class="navbar navbar-default navbar-css">
   <div class="container-fluid container-fluid-css">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,7 +34,7 @@
           <ul class="dropdown-menu">
             <li><a href="http://larryhillyer.github.io/resume/">Resume</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="http://larryhillyer.github.io/projects/">Projects</a></li>
+            <li><a href="http://larryhillyer.github.io/ProjectsPage/">Projects</a></li>
             <li><a href="http://larryhillyer.github.io/landscape-show/">Photography</a></li>
           </ul>
         </li>
@@ -48,14 +48,33 @@
 <div class="container">
     <div class="row"></div>
     <div class="col-sm-8 col-sm-offset-2 slideshow">
-        <ul class="rslides frame">
-            <li><img src="assets/image/ComputerizedSportsPools.png" alt = "block diagram"></li>
-            <li><img src="assets/image/DesignCriteria.png" alt = "database diagram"></li>                                   
+        <ul id = "slide-list" class="rslides frame">
+            <!--<li><img src="assets/image/ComputerizedSportsPools.png" alt = "block diagram"></li>
+            <li><img src="assets/image/DesignCriteria.png" alt = "design Criteria"></li>                                   
             <li><img src="assets/image/RussBucksBlockDiagram.png" alt = "block diagram"></li>
-            <li><img src="assets/image/RussBucksDatabaseDesign.png" alt = "database diagram"></li>               
+            <li><img src="assets/image/RussBucksDatabaseDesign.png" alt = "database diagram"></li>               -->
         </ul>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-3 radio-buttons">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default">
+                    <input id="sports-pool-1" type="radio" class="btn btn-default" name="projects" value="pool" aria-label="...">Sports Pool
+                </label>
+                <label class="btn btn-default">
+                    <input id="decision-making" type="radio" class="btn btn-default" name="projects" value="decision" aria-label="...">Decision Making
+                </label>
+                <label class="btn btn-default">
+                    <input id="texas-holdem" type="radio" class="btn btn-default" name="projects" value="holdem" aria-label="...">Texas Holdem
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </div>
     <script src="assets/js/jquery-2.1.4.js"></script>
