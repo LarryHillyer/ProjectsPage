@@ -5,8 +5,9 @@
 }
 
 body {
-    background-image: url("../image/dark_embroidery.png");
-    background-repeat: repeat;
+    /*background-image: url("../image/dark_embroidery.png");
+    background-repeat: repeat;*/
+    background-color: rgba(100,100,100,1)
 }
 .frame {
 
