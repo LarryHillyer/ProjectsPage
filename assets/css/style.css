@@ -5,8 +5,9 @@
 }
 
 body {
-    background-image: url("../image/dark_embroidery.png");
-    background-repeat: repeat;
+    /*background-image: url("../image/dark_embroidery.png");
+    background-repeat: repeat;*/
+    background-color: rgba(100,100,100,1);
 }
 .frame {
 
@@ -23,7 +24,13 @@ body {
 }
 .radio-buttons {
     text-align: center;
-    margin-left: 29.5%;
+    margin-top: 40%;
+}
+.panel-1 {
+    background-color: rgba(100,100,100,1);
+    border-color: rgba(100,100,100,1);
+    margin-top: 80%;
+    
 }
 
 

@@ -137,7 +137,7 @@ $(document).ready(function() {
     slideListElem = document.getElementById("slide-list");
     initializeResponsiveSlides();
                                       
-    $(".radio").change(function() {
+    $(".radio1").change(function() {
         slideShowElem = document.getElementsByClassName("slideshow");
         slideTabsElem = document.getElementsByClassName("rslides_tabs")
         slideListElem = document.getElementById("slide-list");
