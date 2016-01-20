@@ -144,7 +144,7 @@ $(document).ready(function() {
         
         clearSlideShow();
         getSeletectedProject();
-        createSlideShow()
+        createSlideShow();
         
     });                                
                                     
